@@ -1,0 +1,90 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+button {
+  margin: 30px 20px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 2px solid;
+  font: 16px 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  font-family:微软雅黑;
+}
+
+
+html,body{
+    text-align: center;
+    height: 100%;
+	
+}
+/* 位置调整 */
+.container{
+	left:33%;
+    display: inline-flex;
+    list-style: none;
+	position: absolute; 
+	bottom: 50px; 
+    clear:both; 
+}
+
+.container li{
+    position: relative;
+    height: 70px;
+    width: 70px;
+    border: 2px solid #000000;
+    margin: 0 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.container li:hover{
+    transition: background 0.001s ease 0.3s;
+    background: #000000;
+}
+
+.container li:before,
+.container li:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    border: 0px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.container li:hover:before{
+    border-width: 70px;
+    border-top-color: #000000;
+    transition: border-top-width 0.3s ease, border-top-color .3s ease;
+}
+
+.container li:hover:after{
+    border-width: 70px;
+    border-left-color: #000000;
+    transition: border-left-width 0.3s ease, border-left-color .3s ease;
+}
+
+.container li a{
+    line-height: 70px;
+    font-size: 30px;
+    color: #000000;
+    z-index: 1;
+    position: relative;
+    transition: all .25s ease;
+}
+
+.container li:hover a{
+    color: #fff;
+
+}
